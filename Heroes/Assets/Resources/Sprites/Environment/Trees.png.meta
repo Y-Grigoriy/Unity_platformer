@@ -1,0 +1,1093 @@
+fileFormatVersion: 2
+guid: cd0531a02814b804192f7b244babdf70
+TextureImporter:
+  fileIDToRecycleName:
+    21300000: "Au\xDFen01-Taime_0"
+    21300002: "Au\xDFen01-Taime_1"
+    21300004: "Au\xDFen01-Taime_2"
+    21300006: "Au\xDFen01-Taime_3"
+    21300008: "Au\xDFen01-Taime_4"
+    21300010: "Au\xDFen01-Taime_5"
+    21300012: "Au\xDFen01-Taime_6"
+    21300014: "Au\xDFen01-Taime_7"
+    21300016: "Au\xDFen01-Taime_8"
+    21300018: "Au\xDFen01-Taime_9"
+    21300020: "Au\xDFen01-Taime_10"
+    21300022: "Au\xDFen01-Taime_11"
+    21300024: "Au\xDFen01-Taime_12"
+    21300026: "Au\xDFen01-Taime_13"
+    21300028: "Au\xDFen01-Taime_14"
+    21300030: "Au\xDFen01-Taime_15"
+    21300032: "Au\xDFen01-Taime_16"
+    21300034: "Au\xDFen01-Taime_17"
+    21300036: "Au\xDFen01-Taime_18"
+    21300038: "Au\xDFen01-Taime_19"
+    21300040: "Au\xDFen01-Taime_20"
+    21300042: "Au\xDFen01-Taime_21"
+    21300044: "Au\xDFen01-Taime_22"
+    21300046: "Au\xDFen01-Taime_23"
+    21300048: "Au\xDFen01-Taime_24"
+    21300050: "Au\xDFen01-Taime_25"
+    21300052: "Au\xDFen01-Taime_26"
+    21300054: "Au\xDFen01-Taime_27"
+    21300056: "Au\xDFen01-Taime_28"
+    21300058: "Au\xDFen01-Taime_29"
+    21300060: "Au\xDFen01-Taime_30"
+    21300062: "Au\xDFen01-Taime_31"
+    21300064: "Au\xDFen01-Taime_32"
+    21300066: "Au\xDFen01-Taime_33"
+    21300068: "Au\xDFen01-Taime_34"
+    21300070: "Au\xDFen01-Taime_35"
+    21300072: "Au\xDFen01-Taime_36"
+    21300074: "Au\xDFen01-Taime_37"
+    21300076: "Au\xDFen01-Taime_38"
+    21300078: "Au\xDFen01-Taime_39"
+    21300080: "Au\xDFen01-Taime_40"
+    21300082: "Au\xDFen01-Taime_41"
+    21300084: "Au\xDFen01-Taime_42"
+    21300086: "Au\xDFen01-Taime_43"
+    21300088: "Au\xDFen01-Taime_44"
+    21300090: "Au\xDFen01-Taime_45"
+    21300092: "Au\xDFen01-Taime_46"
+    21300094: "Au\xDFen01-Taime_47"
+    21300096: "Au\xDFen01-Taime_48"
+    21300098: "Au\xDFen01-Taime_49"
+    21300100: "Au\xDFen01-Taime_50"
+    21300102: "Au\xDFen01-Taime_51"
+    21300104: "Au\xDFen01-Taime_52"
+    21300106: "Au\xDFen01-Taime_53"
+  externalObjects: {}
+  serializedVersion: 7
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: -1
+    aniso: -1
+    mipBias: -100
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 0
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  platformSettings:
+  - serializedVersion: 2
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+  - serializedVersion: 2
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: "Au\xDFen01-Taime_0"
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 576
+        width: 144
+        height: 192
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d32974b9474557945b401b83aff652af
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Au\xDFen01-Taime_1"
+      rect:
+        serializedVersion: 2
+        x: 147
+        y: 531
+        width: 185
+        height: 234
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7730dc1446025c343a3a8e4493c6c795
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Au\xDFen01-Taime_2"
+      rect:
+        serializedVersion: 2
+        x: 336
+        y: 528
+        width: 193
+        height: 238
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5f82ea7c1c074584ca4118f765587e0d
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Au\xDFen01-Taime_3"
+      rect:
+        serializedVersion: 2
+        x: 530
+        y: 481
+        width: 140
+        height: 285
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6f65fbc4f0f903f4f995efec5b296486
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Au\xDFen01-Taime_4"
+      rect:
+        serializedVersion: 2
+        x: 672
+        y: 672
+        width: 48
+        height: 69
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 219a28f6f2149ab4a97c659fa993c0b5
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Au\xDFen01-Taime_5"
+      rect:
+        serializedVersion: 2
+        x: 723
+        y: 672
+        width: 41
+        height: 56
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a4a1e2bd12743134e93ec723f172608d
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Au\xDFen01-Taime_6"
+      rect:
+        serializedVersion: 2
+        x: 691
+        y: 576
+        width: 62
+        height: 65
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e46f57d0a3459724a96edd09ebf9810d
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Au\xDFen01-Taime_7"
+      rect:
+        serializedVersion: 2
+        x: 4
+        y: 336
+        width: 140
+        height: 203
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bb5d3711efb56e347a7dd01e28630077
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Au\xDFen01-Taime_8"
+      rect:
+        serializedVersion: 2
+        x: 148
+        y: 432
+        width: 91
+        height: 94
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a14f37cd60f26b449b3f6f1871bbf12c
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Au\xDFen01-Taime_9"
+      rect:
+        serializedVersion: 2
+        x: 242
+        y: 336
+        width: 136
+        height: 192
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8249857f20a63674ab139377665d320a
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Au\xDFen01-Taime_10"
+      rect:
+        serializedVersion: 2
+        x: 384
+        y: 336
+        width: 146
+        height: 191
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8b3b729b1c75b26469319420e4a032b7
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Au\xDFen01-Taime_11"
+      rect:
+        serializedVersion: 2
+        x: 691
+        y: 479
+        width: 62
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c127fe77e11dfb74da5aee0da1bc22d1
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Au\xDFen01-Taime_12"
+      rect:
+        serializedVersion: 2
+        x: 528
+        y: 242
+        width: 193
+        height: 236
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e21c664764534a64e916959a19e80efa
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Au\xDFen01-Taime_13"
+      rect:
+        serializedVersion: 2
+        x: 732
+        y: 446
+        width: 25
+        height: 18
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7833d1d5fcdadbc48a4df9f97df8e7e5
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Au\xDFen01-Taime_14"
+      rect:
+        serializedVersion: 2
+        x: 144
+        y: 336
+        width: 47
+        height: 66
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 05ba7865796954641a8149bfc7e3e88e
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Au\xDFen01-Taime_15"
+      rect:
+        serializedVersion: 2
+        x: 730
+        y: 396
+        width: 28
+        height: 24
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a4be09e3437f1f143aa68da1ecf01e9f
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Au\xDFen01-Taime_16"
+      rect:
+        serializedVersion: 2
+        x: 723
+        y: 343
+        width: 42
+        height: 28
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d9f1b1b053cb45f44b71825326906968
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Au\xDFen01-Taime_17"
+      rect:
+        serializedVersion: 2
+        x: 3
+        y: 50
+        width: 138
+        height: 285
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d0aff72fa444ba6478557196e143e595
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Au\xDFen01-Taime_18"
+      rect:
+        serializedVersion: 2
+        x: 143
+        y: 240
+        width: 50
+        height: 68
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5ea77fd01c64ff4448d52c4740f82956
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Au\xDFen01-Taime_19"
+      rect:
+        serializedVersion: 2
+        x: 195
+        y: 144
+        width: 135
+        height: 191
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d349c4fbd0ccd8e4595e57a829584815
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Au\xDFen01-Taime_20"
+      rect:
+        serializedVersion: 2
+        x: 338
+        y: 145
+        width: 142
+        height: 188
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fd21b212fdcb2c24c9ed38658a565f53
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Au\xDFen01-Taime_21"
+      rect:
+        serializedVersion: 2
+        x: 480
+        y: 239
+        width: 48
+        height: 94
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9057ae6401bac2d419fe4fa2d66c0a30
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Au\xDFen01-Taime_22"
+      rect:
+        serializedVersion: 2
+        x: 720
+        y: 292
+        width: 48
+        height: 31
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: caf47e433e0cf2142a580c66e799004b
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Au\xDFen01-Taime_23"
+      rect:
+        serializedVersion: 2
+        x: 733
+        y: 255
+        width: 23
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 672822e20c80a0a49b741444d3e491eb
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Au\xDFen01-Taime_24"
+      rect:
+        serializedVersion: 2
+        x: 144
+        y: 144
+        width: 47
+        height: 60
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 578100fffb0bbd14091b6dd02f19e9d4
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Au\xDFen01-Taime_25"
+      rect:
+        serializedVersion: 2
+        x: 490
+        y: 203
+        width: 30
+        height: 19
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f84e7a60f1b819e46909f4fe29dadee5
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Au\xDFen01-Taime_26"
+      rect:
+        serializedVersion: 2
+        x: 529
+        y: 192
+        width: 95
+        height: 44
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 61cffe9d994b89f449c759d1495ff0b2
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Au\xDFen01-Taime_27"
+      rect:
+        serializedVersion: 2
+        x: 631
+        y: 200
+        width: 35
+        height: 28
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: adb4ce11c5d783c49984a6c9c2eac59e
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Au\xDFen01-Taime_28"
+      rect:
+        serializedVersion: 2
+        x: 678
+        y: 200
+        width: 34
+        height: 31
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7c953f3a6144e604db53ba1123ff6130
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Au\xDFen01-Taime_29"
+      rect:
+        serializedVersion: 2
+        x: 728
+        y: 201
+        width: 33
+        height: 27
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c472a4a8a1a955e44b48365fa84d837e
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Au\xDFen01-Taime_30"
+      rect:
+        serializedVersion: 2
+        x: 490
+        y: 156
+        width: 30
+        height: 23
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4e958bb52b2192e43a962c593e4293e6
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Au\xDFen01-Taime_31"
+      rect:
+        serializedVersion: 2
+        x: 535
+        y: 148
+        width: 32
+        height: 36
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c47fd3f2ba17c5548b2d15779dbd585e
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Au\xDFen01-Taime_32"
+      rect:
+        serializedVersion: 2
+        x: 580
+        y: 150
+        width: 44
+        height: 35
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: aa0997c06344d03409e68d719ba78f82
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Au\xDFen01-Taime_33"
+      rect:
+        serializedVersion: 2
+        x: 627
+        y: 151
+        width: 42
+        height: 35
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e5aa355a08a474b479b44fa5d9ac59c9
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Au\xDFen01-Taime_34"
+      rect:
+        serializedVersion: 2
+        x: 676
+        y: 152
+        width: 44
+        height: 28
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 63a29c862b9789740b0e6e9c38773bec
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Au\xDFen01-Taime_35"
+      rect:
+        serializedVersion: 2
+        x: 723
+        y: 152
+        width: 43
+        height: 29
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 51d1ad338230e894cbc1fdad895ce64d
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Au\xDFen01-Taime_36"
+      rect:
+        serializedVersion: 2
+        x: 150
+        y: 96
+        width: 35
+        height: 47
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5a525864fabc55b4394a691f2d026822
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Au\xDFen01-Taime_37"
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 48
+        width: 96
+        height: 96
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0c39b63d1509e9445a5d06cecdb53bc0
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Au\xDFen01-Taime_38"
+      rect:
+        serializedVersion: 2
+        x: 290
+        y: 95
+        width: 240
+        height: 49
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a6774b6e2cd1cee468821be8b744405e
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Au\xDFen01-Taime_39"
+      rect:
+        serializedVersion: 2
+        x: 556
+        y: 127
+        width: 13
+        height: 8
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8b2165f6eec93014791ef29031f13546
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Au\xDFen01-Taime_41"
+      rect:
+        serializedVersion: 2
+        x: 627
+        y: 107
+        width: 37
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e6f271b9ab33d5c438641131b048f17f
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Au\xDFen01-Taime_42"
+      rect:
+        serializedVersion: 2
+        x: 675
+        y: 104
+        width: 59
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 13, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3d664d9929326234f86a53ac8fda458e
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Au\xDFen01-Taime_44"
+      rect:
+        serializedVersion: 2
+        x: 721
+        y: 95
+        width: 47
+        height: 48
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0368ae688a183f24bbc0d0e7db2b3923
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Au\xDFen01-Taime_45"
+      rect:
+        serializedVersion: 2
+        x: 533
+        y: 104
+        width: 40
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9a656fce34b023a4b9ba106a593ca5de
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Au\xDFen01-Taime_46"
+      rect:
+        serializedVersion: 2
+        x: 563
+        y: 116
+        width: 8
+        height: 6
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 95723ff238009204789adc4960ccc4bb
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Au\xDFen01-Taime_47"
+      rect:
+        serializedVersion: 2
+        x: 581
+        y: 104
+        width: 39
+        height: 31
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 49a8038d44bef0849a02aa4944afda6d
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Au\xDFen01-Taime_53"
+      rect:
+        serializedVersion: 2
+        x: 288
+        y: 0
+        width: 48
+        height: 94
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8fa36bf0b47525e4d92b6bb38ca70ec7
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 086cc20f3ab0597489dd74d21e63d423
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

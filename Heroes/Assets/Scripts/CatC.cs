@@ -137,6 +137,60 @@ public class CatC : MonoBehaviour
         return Mathf.PI * Mathf.Pow(r, 2);
     }
 
+    /*private void OnCollisionEnter2D(Collision2D col)
+    {
+        if (col.gameObject.CompareTag(collisionTag))
+        {
+            health = col.gameObject.GetComponent<Health>();
+            animator = col.gameObject.GetComponent<Animator> ();
+            GD = col.gameObject.GetComponent<GroundDetection>();
+            if (health != null)
+            {
+                direction = (col.transform.position - transform.position).x;
+                animator.SetFloat("Direction", Mathf.Abs(direction));
+                animator.SetTrigger("TakeHit");
+                /GD.isGrounded = true;
+            }
+        }
+    }*/
+
+    /*private void OnCollisionEnter2D(Collision2D col)
+    {
+        health = col.gameObject.GetComponent<Health>();
+        //GD = col.gameObject.GetComponent<GroundDetection>();
+        if (health != null)
+        {
+            animator = col.gameObject.GetComponent<Animator>();
+            direction = (col.transform.position - transform.position).x;
+            if (col.gameObject.CompareTag("Enemy") && gameObject.tag == "projectile")
+            {
+                animator.SetFloat("Direction", Mathf.Abs(direction));
+                gameObject.GetComponent<Animator>().SetFloat("Direction", Mathf.Abs(direction));
+            }
+            else if (gameObject.tag != "projectile")
+            {
+                if (collisionTag == "Enemy")
+                    animator.SetFloat("Direction", Mathf.Abs(direction));
+                if (collisionTag == "Player")
+                    animator.SetTrigger("TakeHit");
+            }
+
+            //if (collisionTag == "Player")
+            //    animator.SetTrigger("TakeHit");
+            //GD.isGrounded = true;
+        }
+
+        for (int j = 0; j < traps.Length; j++)
+            if ((col.gameObject.name == traps[j].name) && (!go.Contains(col.gameObject)))
+                go.Add(col.gameObject);
+        /*if (go.Count >= 2)
+        {
+            Health health = GameObject.Find("Player").GetComponent<Health>();
+            health.TakeHealth(wheelDamage);
+        }
+        //Debug.Log(go.Count);
+    }*/
+
     /*bool Checks(int a, int b)
     {
         if (a < b)

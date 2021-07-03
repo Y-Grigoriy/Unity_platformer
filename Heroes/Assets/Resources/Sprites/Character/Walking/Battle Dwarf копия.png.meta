@@ -1,0 +1,351 @@
+fileFormatVersion: 2
+guid: 7c9e345ab93fbb6449186887fa0b07e2
+TextureImporter:
+  fileIDToRecycleName:
+    21300000: "Battle Dwarf \u043A\u043E\u043F\u0438\u044F_0"
+    21300002: "Battle Dwarf \u043A\u043E\u043F\u0438\u044F_1"
+    21300004: "Battle Dwarf \u043A\u043E\u043F\u0438\u044F_2"
+    21300006: "Battle Dwarf \u043A\u043E\u043F\u0438\u044F_3"
+    21300008: "Battle Dwarf \u043A\u043E\u043F\u0438\u044F_4"
+    21300010: "Battle Dwarf \u043A\u043E\u043F\u0438\u044F_5"
+    21300012: "Battle Dwarf \u043A\u043E\u043F\u0438\u044F_6"
+    21300014: "Battle Dwarf \u043A\u043E\u043F\u0438\u044F_7"
+    21300016: "Battle Dwarf \u043A\u043E\u043F\u0438\u044F_8"
+    21300018: "Battle Dwarf \u043A\u043E\u043F\u0438\u044F_9"
+    21300020: "Battle Dwarf \u043A\u043E\u043F\u0438\u044F_10"
+    21300022: "Battle Dwarf \u043A\u043E\u043F\u0438\u044F_11"
+  externalObjects: {}
+  serializedVersion: 7
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: -1
+    aniso: -1
+    mipBias: -100
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 0
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 70
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  platformSettings:
+  - serializedVersion: 2
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 4096
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 2
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+  - serializedVersion: 2
+    buildTarget: Standalone
+    maxTextureSize: 4096
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 2
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: "Battle Dwarf \u043A\u043E\u043F\u0438\u044F_0"
+      rect:
+        serializedVersion: 2
+        x: 18
+        y: 119
+        width: 36
+        height: 69
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d20c517ed5b6da44c9fd261e503873bd
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Battle Dwarf \u043A\u043E\u043F\u0438\u044F_1"
+      rect:
+        serializedVersion: 2
+        x: 110
+        y: 119
+        width: 45
+        height: 69
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 95efa82521309884da5450877d219af5
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Battle Dwarf \u043A\u043E\u043F\u0438\u044F_2"
+      rect:
+        serializedVersion: 2
+        x: 198
+        y: 119
+        width: 51
+        height: 68
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ac6bff6db696a7c4587744a398477596
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Battle Dwarf \u043A\u043E\u043F\u0438\u044F_3"
+      rect:
+        serializedVersion: 2
+        x: 269
+        y: 122
+        width: 49
+        height: 66
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a7f985ca9e40f534187b510cb25f1a94
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Battle Dwarf \u043A\u043E\u043F\u0438\u044F_4"
+      rect:
+        serializedVersion: 2
+        x: 347
+        y: 120
+        width: 44
+        height: 69
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d93909e042e9e7e41b84f7db68bc3738
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Battle Dwarf \u043A\u043E\u043F\u0438\u044F_5"
+      rect:
+        serializedVersion: 2
+        x: 429
+        y: 119
+        width: 40
+        height: 69
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 270df4b21d0e59d4888fe675261caf1a
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Battle Dwarf \u043A\u043E\u043F\u0438\u044F_6"
+      rect:
+        serializedVersion: 2
+        x: 502
+        y: 117
+        width: 50
+        height: 70
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d6d3056ab487f2546ab04086fc1f0ad9
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Battle Dwarf \u043A\u043E\u043F\u0438\u044F_7"
+      rect:
+        serializedVersion: 2
+        x: 577
+        y: 116
+        width: 44
+        height: 72
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 38ff39cbcc0011648a73f8202e3f8c6c
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Battle Dwarf \u043A\u043E\u043F\u0438\u044F_8"
+      rect:
+        serializedVersion: 2
+        x: 28
+        y: 12
+        width: 38
+        height: 71
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2ed73270b6a8c8d4f84ef277151f3055
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Battle Dwarf \u043A\u043E\u043F\u0438\u044F_9"
+      rect:
+        serializedVersion: 2
+        x: 116
+        y: 12
+        width: 48
+        height: 70
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3cab2ba065b959745bbbf4212b9bbc2a
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Battle Dwarf \u043A\u043E\u043F\u0438\u044F_10"
+      rect:
+        serializedVersion: 2
+        x: 203
+        y: 14
+        width: 50
+        height: 67
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4c04d7363c096b549a94c71ae016c2ac
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Battle Dwarf \u043A\u043E\u043F\u0438\u044F_11"
+      rect:
+        serializedVersion: 2
+        x: 278
+        y: 13
+        width: 42
+        height: 69
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bf72b9de8274a3942822da4e64c85d0b
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 9d32a9afa9c1f574fa335afc4095d732
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

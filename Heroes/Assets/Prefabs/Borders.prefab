@@ -22,7 +22,7 @@ GameObject:
   m_Layer: 0
   m_Name: Right
   m_TagString: Untagged
-  m_Icon: {fileID: -5487077368411116049, guid: 0000000000000000d000000000000000, type: 0}
+  m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
@@ -76,7 +76,7 @@ GameObject:
   m_Layer: 0
   m_Name: Left
   m_TagString: Untagged
-  m_Icon: {fileID: -5487077368411116049, guid: 0000000000000000d000000000000000, type: 0}
+  m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
@@ -155,7 +155,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1481754951966966}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -28.273008, y: 3.1423948, z: 0}
+  m_LocalPosition: {x: -27.57, y: -2.66, z: 0}
   m_LocalScale: {x: 1.3361839, y: 1.3361839, z: 1.3361839}
   m_Children:
   - {fileID: 4148288282174648}
@@ -310,7 +310,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 48ab5849a50591543a5a566ddd5d1da0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  health: 100
+  health: 80
 --- !u!212 &212153006976245664
 SpriteRenderer:
   m_ObjectHideFlags: 1

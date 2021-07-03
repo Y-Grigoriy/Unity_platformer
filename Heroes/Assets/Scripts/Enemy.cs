@@ -22,6 +22,11 @@ public class Enemy : MonoBehaviour {
     [SerializeField] private SpriteRenderer EnemyRender;
     [SerializeField] private DamageCollision dG;
 	
+    void Start()
+    {
+        GameManager.Instance.animatorContainer.Add(gameObject, gameObject.GetComponent<Animator>());
+    }
+
 	// Update is called once per frame
 	void FixedUpdate () {
         if (gD.isGrounded && Body != null)

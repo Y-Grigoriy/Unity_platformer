@@ -7,10 +7,10 @@ public class DamageCollision : MonoBehaviour {
 
     public int damage = 10;
     int wheelDamage = 2;
-    public string collisionTag;
+    [SerializeField] private string collisionTag;
     public Rigidbody2D[] traps = { };
     List<GameObject> go = new List<GameObject>();
-    public float repeat_time=3, repeat_time2 = 5;
+    public float repeat_time=10, repeat_time2 = 5;
     private float curr_time;
     private Health health;
     private Animator animator;
@@ -26,35 +26,17 @@ public class DamageCollision : MonoBehaviour {
         curr_time = repeat_time;
     }
 
-    /*private void OnCollisionEnter2D(Collision2D col)
-    {
-        if (col.gameObject.CompareTag(collisionTag))
-        {
-            health = col.gameObject.GetComponent<Health>();
-            animator = col.gameObject.GetComponent<Animator> ();
-            GD = col.gameObject.GetComponent<GroundDetection>();
-            if (health != null)
-            {
-                direction = (col.transform.position - transform.position).x;
-                animator.SetFloat("Direction", Mathf.Abs(direction));
-                animator.SetTrigger("TakeHit");
-                /GD.isGrounded = true;
-            }
-        }
-    }*/
-
     private void OnCollisionEnter2D(Collision2D col)
     {
-        health = col.gameObject.GetComponent<Health>();
-        //GD = col.gameObject.GetComponent<GroundDetection>();
-        if (health != null)
+        if (GameManager.Instance.healthContainer.ContainsKey(col.gameObject))
         {
-            animator = col.gameObject.GetComponent<Animator>();
+            health = GameManager.Instance.healthContainer[col.gameObject];
+            animator = GameManager.Instance.animatorContainer[col.gameObject];
             direction = (col.transform.position - transform.position).x;
             if (col.gameObject.CompareTag("Enemy") && gameObject.tag == "projectile")
             {
                 animator.SetFloat("Direction", Mathf.Abs(direction));
-                gameObject.GetComponent<Animator>().SetFloat("Direction", Mathf.Abs(direction));
+                GameManager.Instance.animatorContainer[gameObject].SetFloat("Direction", Mathf.Abs(direction));
             }
             else if (gameObject.tag != "projectile") 
             {
@@ -63,13 +45,8 @@ public class DamageCollision : MonoBehaviour {
                 if (collisionTag == "Player")
                     animator.SetTrigger("TakeHit");
             }
-                
-            //if (collisionTag == "Player")
-            //    animator.SetTrigger("TakeHit");
-            //GD.isGrounded = true;
         }
 
-        //int[] colls = new int[traps.Length];
         for (int j = 0; j < traps.Length; j++)
             if ((col.gameObject.name == traps[j].name) && (!go.Contains(col.gameObject)))
                 go.Add(col.gameObject);
@@ -86,29 +63,23 @@ public class DamageCollision : MonoBehaviour {
         curr_time -= Time.deltaTime; // subtract frame time
         if (col.gameObject.CompareTag(collisionTag) && (curr_time <= 0))
         {
-            health = col.gameObject.GetComponent<Health>();
-            //health.TakeHealth(damage);
-            animator = col.gameObject.GetComponent<Animator>();
-            //GD = col.gameObject.GetComponent<GroundDetection>();
-            if (health != null)
+            if (GameManager.Instance.healthContainer.ContainsKey(col.gameObject))
             {
+                health = GameManager.Instance.healthContainer[col.gameObject];
+                animator = GameManager.Instance.animatorContainer[col.gameObject];
                 direction = (col.transform.position - transform.position).x;
                 if (col.gameObject.CompareTag("Enemy") && gameObject.tag == "projectile")
                 {
                     animator.SetFloat("Direction", Mathf.Abs(direction));
-                    gameObject.GetComponent<Animator>().SetFloat("Direction", Mathf.Abs(direction));
+                    GameManager.Instance.animatorContainer[gameObject].SetFloat("Direction", Mathf.Abs(direction));
                 }
-                else if (!gameObject.CompareTag("projectile"))
+                else if (gameObject.tag != "projectile")
                 {
                     if (collisionTag == "Enemy")
                         animator.SetFloat("Direction", Mathf.Abs(direction));
                     if (collisionTag == "Player")
                         animator.SetTrigger("TakeHit");
                 }
-
-                //if (collisionTag == "Player")
-                //    animator.SetTrigger("TakeHit");
-                //GD.isGrounded = true;
             }
             curr_time = repeat_time2; // update timer
         }
@@ -116,15 +87,19 @@ public class DamageCollision : MonoBehaviour {
 
     void OnCollisionExit2D(Collision2D collisionInfo)
     {
-        /*if (collisionInfo.gameObject.CompareTag(collisionTag) && collisionTag=="Enemy")
+        if (collisionInfo.gameObject.CompareTag(collisionTag) && gameObject.CompareTag("Enemy"))
+        {
+            direction = 0.0f;
+            GameManager.Instance.animatorContainer[gameObject].SetFloat("Direction", direction);
+        }
+        else if (collisionInfo.gameObject.CompareTag(collisionTag) && gameObject.CompareTag("Player"))
         {
             direction = 0.0f;
             animator.SetFloat("Direction", direction);
-        }*/
+        }
         for (int j = 0; j < traps.Length; j++)
             if ((collisionInfo.gameObject.name == traps[j].name) && (go.Contains(collisionInfo.gameObject)))
                 this.go.Remove(collisionInfo.gameObject);
-        //Debug.Log(go.Count+"List_updated");
     }
 
     public void SetDamage()
@@ -147,8 +122,10 @@ public class DamageCollision : MonoBehaviour {
         curr_time -= Time.deltaTime; // subtract frame time
         if ((go.Count >= 2) && (curr_time <= 0))
         {
-            health = GameObject.Find("Player").GetComponent<Health>();
+            health = GameManager.Instance.healthContainer[gameObject];
             health.TakeHealth(wheelDamage);
+            health = null;
+            GameManager.Instance.animatorContainer[gameObject].SetTrigger("TakeHit");
             curr_time = repeat_time; // update timer
         }
     }

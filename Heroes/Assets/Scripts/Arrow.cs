@@ -2,7 +2,8 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Arrow : MonoBehaviour {
+public class Arrow : MonoBehaviour, IObjectDestroyer
+{
 
     [SerializeField] private SpriteRenderer sR;
     [SerializeField] private Rigidbody2D rB;
@@ -14,11 +15,21 @@ public class Arrow : MonoBehaviour {
         get { return force; }
         set { force = value;}
     }
+    private PlayerTools.Player player;
+
+    public void Destroy(GameObject gameObject)
+    {
+        player.ReturnArrowToPool(this.gameObject);
+    }
 
     // Use this for initialization
-    public void SetImpulse (Vector2 direction, float force, GameObject parent)
+    //public void SetImpulse (Vector2 direction, float force, GameObject parent)
+    public void SetImpulse(Vector2 direction, float force, PlayerTools.Player player)
     {
-        triggerDamage.Parent = parent;
+        //triggerDamage.Parent = parent;
+        this.player = player;
+        triggerDamage.Init(this);
+        triggerDamage.Parent = player.gameObject;
         if (force < 0)
             transform.rotation = Quaternion.Euler(0, 180, 0);
         rB.AddForce(direction * force, ForceMode2D.Impulse);

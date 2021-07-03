@@ -4,13 +4,14 @@ using UnityEngine;
 
 public class Recovery : MonoBehaviour {
 
-    public int rec = 5;
+    [SerializeField] private int rec = 5;
+    private Health health;
 
     private void OnTriggerEnter2D(Collider2D col)
     {
-        if (col.gameObject.CompareTag("Player"))
+        if (GameManager.Instance.healthContainer.ContainsKey(col.gameObject))
         {
-            Health health = col.gameObject.GetComponent<Health>();
+            health = GameManager.Instance.healthContainer[col.gameObject];
             health.GiveHealth(rec);
             Destroy(gameObject);
         }

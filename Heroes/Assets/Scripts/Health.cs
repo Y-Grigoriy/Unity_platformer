@@ -5,7 +5,12 @@ using UnityEngine;
 public class Health : MonoBehaviour {
 
     public int health;
-	
+
+    private void Start()
+    {
+        GameManager.Instance.healthContainer.Add(gameObject, this);
+    }
+
 	// Update is called once per frame
 	public void TakeHealth (int damage) {
         health -= damage;

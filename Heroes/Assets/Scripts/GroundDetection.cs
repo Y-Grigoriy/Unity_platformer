@@ -11,11 +11,6 @@ public class GroundDetection : MonoBehaviour {
         if (col.gameObject.CompareTag("Ground") || col.gameObject.CompareTag("Trap")) // || col.gameObject.CompareTag("Enemy")
             isGrounded = true;
     }
-    /*private void OnTriggerEnter2D(Collider2D col)
-    {
-        if (col.gameObject.CompareTag("Ground")|| col.gameObject.CompareTag("Trap")) // || col.gameObject.CompareTag("Enemy")
-            isGrounded = true;
-    }*/
 
     void OnTriggerExit2D(Collider2D isCol)
     {

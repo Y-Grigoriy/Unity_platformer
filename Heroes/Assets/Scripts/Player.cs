@@ -7,7 +7,16 @@ namespace PlayerTools
 {
     public class Player : MonoBehaviour
     {
-
+        [SerializeField] private int arrowCount = 4;
+        public int ArrowCount
+        {
+            get { return arrowCount; }
+            set
+            {
+                if (value > 0)
+                    arrowCount = value;
+            }
+        }
         [SerializeField] private float speed = 5.0f;
         public float Speed
         {
@@ -18,18 +27,28 @@ namespace PlayerTools
                     speed = value;
             }
         }
-        public float jumpforce = 4.0f;
+        [SerializeField] private float jumpforce = 4.0f;
+        public float JumpForce
+        {
+            get { return jumpforce; }
+            set
+            {
+                if (value > 0.1f && value < 8f)
+                    jumpforce = value;
+            }
+        }
         public float shootCoeff = 3.0f;
         public int minimalHeight = -5;
         public bool shoot;
-        public bool isCheatMode;
+        [SerializeField] private bool isCheatMode;
         public SpriteRenderer[] renderers = { };
-        [SerializeField] private  Rigidbody2D playerbody;
-        public GroundDetection groundDetection;
+        [SerializeField] private Rigidbody2D playerbody;
+        [SerializeField] private GroundDetection groundDetection;
         private Vector3 direction;
-        [SerializeField] private  Animator anima;
-        [SerializeField] private  SpriteRenderer playerRender;
         private bool isJumping;
+        private List<GameObject> arrowPool;
+        [SerializeField] private Animator anima;
+        [SerializeField] private SpriteRenderer playerRender;
         [SerializeField] private GameObject arrow;
         [SerializeField] private Transform arrowSpawnPoint;
                 
@@ -43,6 +62,17 @@ namespace PlayerTools
         // Initialization
         void Start()
         {
+            arrowPool = new List<GameObject>();
+            for (int i = 0; i < arrowCount; i++)
+            {
+                var arrowTemp = Instantiate(arrow, arrowSpawnPoint);
+                arrowPool.Add(arrowTemp);
+                arrowTemp.gameObject.SetActive(false);
+                GameManager.Instance.animatorContainer.Add(arrowTemp.gameObject, arrowTemp.gameObject.GetComponent<Animator>());
+            }
+
+            GameManager.Instance.animatorContainer.Add(gameObject, gameObject.GetComponent<Animator>());
+
             // Changing color
             for (int j = 0; j < renderers.Length; j++)
                 renderers[j].color = new Color(Random.Range(0, 1f), Random.Range(0, 1f), Random.Range(0, 1f));
@@ -66,7 +96,6 @@ namespace PlayerTools
                 isJumping = true;
             }
             if (Input.GetKey(KeyCode.D))
-                //transform.Translate(Vector2.right * Time.deltaTime * speed);
                 direction = Vector3.right;
             if (Input.GetKey(KeyCode.W))
                 transform.Translate(Vector2.up * Time.deltaTime * speed);
@@ -94,9 +123,9 @@ namespace PlayerTools
 
         void CheckShoot()
         {
-            if (Input.GetMouseButtonDown(0) && shoot == false)
+            if (Input.GetMouseButtonDown(0) && shoot == false && groundDetection.isGrounded)
             {
-                gameObject.GetComponent<Animator>().SetBool("Shoot", true);
+                anima.SetBool("Shoot", true);
                 shoot = true;
                 StartCoroutine(StartShoot());
             }
@@ -105,9 +134,9 @@ namespace PlayerTools
         private IEnumerator StartShoot()
         {
             yield return new WaitWhile(() => shoot == true);
-            GameObject prefab = Instantiate(arrow, arrowSpawnPoint.position, Quaternion.identity);
-            prefab.GetComponent<Arrow>().SetImpulse(Vector2.right, playerRender.flipX ? -jumpforce * shootCoeff : jumpforce * 2.0f, gameObject);
-            gameObject.GetComponent<Animator>().SetBool("Shoot", false);
+            GameObject cArrow = GetArrowFromPool();
+            cArrow.GetComponent<Arrow>().SetImpulse(Vector2.right, playerRender.flipX ? -jumpforce * shootCoeff : jumpforce * 2.0f, this);
+            anima.SetBool("Shoot", false);
             yield break;
         }
 
@@ -116,28 +145,29 @@ namespace PlayerTools
             shoot = false;
         }
 
-        private void OnTriggerEnter2D(Collider2D col)
+        private GameObject GetArrowFromPool()
         {
-            if (col.gameObject.CompareTag("Gold"))
+            if (arrowPool.Count > 0)
             {
-                PlayerInventory.Instance.goldCount++;
-                Debug.Log("Amount of gold" + PlayerInventory.Instance.goldCount);
-                Destroy(col.gameObject);
+                var arrowTemp = arrowPool[0];
+                arrowPool.Remove(arrowTemp);
+                arrowTemp.gameObject.SetActive(true);
+                arrowTemp.transform.parent = null;
+                arrowTemp.transform.position = arrowSpawnPoint.transform.position;
+                arrowTemp.transform.rotation = Quaternion.identity;
+                return arrowTemp;
             }
+            return Instantiate(arrow, arrowSpawnPoint.position, Quaternion.identity); // Запасное создание стрелы
+        }
 
-            if (col.gameObject.CompareTag("Gems"))
-            {
-                PlayerInventory.Instance.gemsCount++;
-                Debug.Log("Amount of gems" + PlayerInventory.Instance.gemsCount);
-                Destroy(col.gameObject);
-            }
+        public void ReturnArrowToPool(GameObject arrowTemp)
+        {
+            if (!arrowPool.Contains(arrowTemp))
+                arrowPool.Add(arrowTemp);
 
-            if (col.gameObject.CompareTag("Kristall"))
-            {
-                PlayerInventory.Instance.kristallsCount++;
-                Debug.Log("Amount of kristalls" + PlayerInventory.Instance.kristallsCount);
-                Destroy(col.gameObject);
-            }
+            arrowTemp.transform.parent = arrowSpawnPoint;
+            arrowTemp.transform.position = arrowSpawnPoint.transform.position;
+            arrowTemp.gameObject.SetActive(false);
         }
 
         // Processing of falling
