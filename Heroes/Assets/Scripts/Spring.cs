@@ -42,7 +42,7 @@ public class Spring : MonoBehaviour
             effectTemp.transform.rotation = Quaternion.identity;
             return effectTemp;
         }
-        return Instantiate(effect, gameObject.transform.position, Quaternion.identity); // Запасное создание стрелы
+        return Instantiate(effect, gameObject.transform.position, Quaternion.identity); // Запасное создание объекта
     }
 
     public void ReturnEffectToPool(GameObject effectTemp)

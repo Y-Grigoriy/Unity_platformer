@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
+using UnityEngine.UI;
 
 namespace PlayerTools
 {
@@ -27,7 +28,7 @@ namespace PlayerTools
                     speed = value;
             }
         }
-        [SerializeField] private float jumpforce = 4.0f;
+        [SerializeField] private float jumpforce = 3.0f;
         public float JumpForce
         {
             get { return jumpforce; }
@@ -51,7 +52,15 @@ namespace PlayerTools
         [SerializeField] private SpriteRenderer playerRender;
         [SerializeField] private GameObject arrow;
         [SerializeField] private Transform arrowSpawnPoint;
-                
+        [SerializeField] public BuffReciever buffReceiver;
+
+        public float bonusForce;
+        public float bonusDamage;
+        public float bonusArmor;
+        private Buff forceBuff, damageBuff, armorBuff;
+        private Health health;
+        [SerializeField] private Text healthText;
+
         void Awake()
         {
             Instance = this;
@@ -73,11 +82,29 @@ namespace PlayerTools
 
             GameManager.Instance.animatorContainer.Add(gameObject, gameObject.GetComponent<Animator>());
 
+            buffReceiver.OnBuffsChanged += ApplyBuff;
+
+            health = GameManager.Instance.healthContainer[this.gameObject];
+            healthText.text = " "+health.health;
+
             // Changing color
             for (int j = 0; j < renderers.Length; j++)
                 renderers[j].color = new Color(Random.Range(0, 1f), Random.Range(0, 1f), Random.Range(0, 1f));
         }
-                
+
+        private void ApplyBuff()
+        {
+            forceBuff = buffReceiver.Buffs.Find(t => t.type == BuffType.Force);
+            damageBuff = buffReceiver.Buffs.Find(t => t.type == BuffType.Damage);
+            armorBuff = buffReceiver.Buffs.Find(t => t.type == BuffType.Armor);
+            bonusForce = forceBuff == null ? 0 : forceBuff.additiveBonus;
+            bonusArmor = armorBuff == null ? 0 : armorBuff.additiveBonus;
+            if (health.maximumHealth != health.typicalHealth + (int)bonusArmor)
+                health.GiveHealth((int)bonusArmor);
+            health.SetMaximumHealth(health.typicalHealth + (int)bonusArmor);
+            bonusDamage = damageBuff == null ? 0 : damageBuff.additiveBonus;
+        }
+
         // Update is called once per frame
         void FixedUpdate()
         {
@@ -91,7 +118,7 @@ namespace PlayerTools
                 direction = Vector3.left;
             if (Input.GetKeyDown(KeyCode.Space) && groundDetection.isGrounded)
             {
-                playerbody.AddForce(Vector2.up * jumpforce, ForceMode2D.Impulse);
+                playerbody.AddForce(Vector2.up * (jumpforce + bonusForce), ForceMode2D.Impulse);
                 anima.SetTrigger("StartJump");
                 isJumping = true;
             }
@@ -119,6 +146,8 @@ namespace PlayerTools
         private void Update()
         {
             CheckShoot();
+
+            healthText.text = "" + health.health;
         }
 
         void CheckShoot()
@@ -135,7 +164,7 @@ namespace PlayerTools
         {
             yield return new WaitWhile(() => shoot == true);
             GameObject cArrow = GetArrowFromPool();
-            cArrow.GetComponent<Arrow>().SetImpulse(Vector2.right, playerRender.flipX ? -jumpforce * shootCoeff : jumpforce * 2.0f, this);
+            cArrow.GetComponent<Arrow>().SetImpulse(Vector2.right, playerRender.flipX ? -jumpforce * shootCoeff : jumpforce * shootCoeff, (int)bonusDamage, this);
             anima.SetBool("Shoot", false);
             yield break;
         }

@@ -18,7 +18,7 @@ MonoBehaviour:
       \u0443\u0440\u043E\u043D"
     icon: {fileID: 21300000, guid: 7a9af0cd7f27a9a48820e27f91be40dd, type: 3}
     type: 1
-    value: 10
+    value: 1
   - iD: 3
     itemName: "\u041A\u0438\u0440\u0430\u0441\u0430"
     description: "\u0411\u0440\u043E\u043D\u044F"
@@ -27,14 +27,16 @@ MonoBehaviour:
     value: 20
   - iD: 1
     itemName: "\u0417\u0430\u043A\u043B\u0438\u043D\u0430\u043D\u0438\u0435 \u0443\u0440\u043E\u043D\u0430"
-    description: "\u041D\u0430\u043D\u043E\u0441\u0438\u0442 \u0443\u0440\u043E\u043D"
+    description: "\u0423\u0432\u0435\u043B\u0438\u0447\u0438\u0432\u0430\u0435\u0442
+      \u0443\u0440\u043E\u043D"
     icon: {fileID: 21300000, guid: 76125f4150ba3e448852b6b10dce7575, type: 3}
     type: 0
     value: 20
   currentItem:
     iD: 1
     itemName: "\u0417\u0430\u043A\u043B\u0438\u043D\u0430\u043D\u0438\u0435 \u0443\u0440\u043E\u043D\u0430"
-    description: "\u041D\u0430\u043D\u043E\u0441\u0438\u0442 \u0443\u0440\u043E\u043D"
+    description: "\u0423\u0432\u0435\u043B\u0438\u0447\u0438\u0432\u0430\u0435\u0442
+      \u0443\u0440\u043E\u043D"
     icon: {fileID: 21300000, guid: 76125f4150ba3e448852b6b10dce7575, type: 3}
     type: 0
     value: 20

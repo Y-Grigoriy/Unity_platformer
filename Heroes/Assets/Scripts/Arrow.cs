@@ -24,12 +24,13 @@ public class Arrow : MonoBehaviour, IObjectDestroyer
 
     // Use this for initialization
     //public void SetImpulse (Vector2 direction, float force, GameObject parent)
-    public void SetImpulse(Vector2 direction, float force, PlayerTools.Player player)
+    public void SetImpulse(Vector2 direction, float force, int bonusDamage, PlayerTools.Player player)
     {
         //triggerDamage.Parent = parent;
         this.player = player;
         triggerDamage.Init(this);
         triggerDamage.Parent = player.gameObject;
+        triggerDamage.Damage += bonusDamage;
         if (force < 0)
             transform.rotation = Quaternion.Euler(0, 180, 0);
         rB.AddForce(direction * force, ForceMode2D.Impulse);

@@ -5,6 +5,8 @@ using UnityEngine;
 public class Health : MonoBehaviour {
 
     public int health;
+    public int typicalHealth;
+    public int maximumHealth=100;
 
     private void Start()
     {
@@ -21,7 +23,12 @@ public class Health : MonoBehaviour {
     public void GiveHealth(int drug)
     {
         health += drug;
-        if (health >100)
-            health = 100;
+        if (health > maximumHealth)
+            health = maximumHealth;
+    }
+
+    public void SetMaximumHealth(int maxHealth)
+    {
+        maximumHealth = maxHealth;
     }
 }

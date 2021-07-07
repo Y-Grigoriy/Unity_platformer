@@ -22,11 +22,6 @@ public class ItemComponent : MonoBehaviour, IObjectDestroyer {
         itemRenderer.sprite = item.Icon;
         GameManager.Instance.itemsContainer.Add(gameObject,this);
     }
-	
-	// Update is called once per frame
-	void Update () {
-		
-	}
 }
 
 public enum ItemType

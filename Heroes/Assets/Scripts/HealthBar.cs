@@ -17,7 +17,7 @@ public class HealthBar : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-        healthValue = GameManager.Instance.healthContainer[player].health / 100.0f;
+        healthValue = GameManager.Instance.healthContainer[player].health / (float)player.GetComponent<Health>().maximumHealth;
         if (healthValue < currentHealthValue)
             currentHealthValue -= delta;
         if (healthValue > currentHealthValue)

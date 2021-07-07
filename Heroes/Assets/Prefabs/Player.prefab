@@ -334,6 +334,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: aa344167a691fd647b5818ec5ed86ba4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  buffEffect:
+  - {fileID: 1861754735461778, guid: b14bfeb5d93b99940b79ba5418eabdc4, type: 2}
+  inventoryPanel: {fileID: 0}
 --- !u!114 &114608690038459288
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -351,6 +354,7 @@ MonoBehaviour:
   goldText: {fileID: 0}
   gemText: {fileID: 0}
   kristallText: {fileID: 0}
+  buffReceiver: {fileID: 114544291734348956}
 --- !u!114 &114687648540124902
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -375,6 +379,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   health: 100
+  typicalHealth: 100
+  maximumHealth: 100
 --- !u!114 &114925020864024910
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -388,7 +394,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   arrowCount: 4
   speed: 5
-  jumpforce: 4
+  jumpforce: 3
   shootCoeff: 3
   minimalHeight: -5
   shoot: 0
@@ -400,6 +406,8 @@ MonoBehaviour:
   playerRender: {fileID: 212590216637939650}
   arrow: {fileID: 1959370480909202, guid: 1b04e377f0f505c4ab9d979877f632db, type: 2}
   arrowSpawnPoint: {fileID: 4114971169060708}
+  buffReceiver: {fileID: 114544291734348956}
+  healthText: {fileID: 0}
 --- !u!212 &212445120352513056
 SpriteRenderer:
   m_ObjectHideFlags: 1
