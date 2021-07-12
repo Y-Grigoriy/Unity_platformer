@@ -1,5 +1,6 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using UnityEngine.UI;
 using UnityEngine;
 using System;
 
@@ -15,6 +16,7 @@ public class BuffReciever : MonoBehaviour {
 
     private List<GameObject> buffPool = new List<GameObject>();
     [SerializeField] private GameObject[] buffEffect = { };
+    [SerializeField] private GameObject[] buffEffectImage = { };
     [SerializeField] private GameObject inventoryPanel;
 
     void Start () {
@@ -39,8 +41,11 @@ public class BuffReciever : MonoBehaviour {
                 StartCoroutine(CloseInventory(PlayerTools.Player.Instance.gameObject, 0));
             if (buff.type == BuffType.Force)
                 StartCoroutine(CloseInventory(PlayerTools.Player.Instance.gameObject, 1));
-            if (buff.type != BuffType.Armor)
-                StartCoroutine(EndBuffEffect(buff));
+            //if (buff.type != BuffType.Armor)
+            if (buff.type == BuffType.Damage)
+                StartCoroutine(EndBuffEffect(buff, 0));
+            if (buff.type == BuffType.Force)
+                StartCoroutine(EndBuffEffect(buff, 1));
             if (OnBuffsChanged != null)
                 OnBuffsChanged();
         } 
@@ -73,6 +78,7 @@ public class BuffReciever : MonoBehaviour {
     private IEnumerator CloseInventory(GameObject hObject, int buffID)
     {
         yield return new WaitUntil(() => !inventoryPanel.activeSelf);
+        buffEffectImage[buffID].SetActive(true);
         GameObject effectTemp = ApplyEffect(PlayerTools.Player.Instance.gameObject, buffID);
         StartCoroutine(EndEffectAnimation(effectTemp));
         yield break;
@@ -85,11 +91,12 @@ public class BuffReciever : MonoBehaviour {
         yield break;
     }
 
-    private IEnumerator EndBuffEffect(Buff buff)
+    private IEnumerator EndBuffEffect(Buff buff, int buffID)
     {
         yield return new WaitUntil(() => !inventoryPanel.activeSelf);
         yield return new WaitForSeconds(2.0f);
         RemoveBuff(buff);
+        buffEffectImage[buffID].SetActive(false);
         yield break;
     }
 }

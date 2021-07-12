@@ -60,6 +60,9 @@ namespace PlayerTools
         private Buff forceBuff, damageBuff, armorBuff;
         private Health health;
         [SerializeField] private Text healthText;
+        private UICharacterController controller;
+
+        //public float timeBeforeShoot=0.0f;
 
         void Awake()
         {
@@ -99,30 +102,78 @@ namespace PlayerTools
             armorBuff = buffReceiver.Buffs.Find(t => t.type == BuffType.Armor);
             bonusForce = forceBuff == null ? 0 : forceBuff.additiveBonus;
             bonusArmor = armorBuff == null ? 0 : armorBuff.additiveBonus;
+            Debug.Log((health.maximumHealth != health.typicalHealth + (int)bonusArmor) + " " + bonusArmor);
             if (health.maximumHealth != health.typicalHealth + (int)bonusArmor)
+            {
+                health.SetMaximumHealth(health.typicalHealth + (int)bonusArmor);
                 health.GiveHealth((int)bonusArmor);
-            health.SetMaximumHealth(health.typicalHealth + (int)bonusArmor);
+            }
+            else
+                health.SetMaximumHealth(health.typicalHealth + (int)bonusArmor);
             bonusDamage = damageBuff == null ? 0 : damageBuff.additiveBonus;
+        }
+
+        public void InitUIController(UICharacterController uiController)
+        {
+            controller = uiController;
+            controller.Jump.onClick.AddListener(Jump);
+            controller.Fire.onClick.AddListener(CheckShoot);
         }
 
         // Update is called once per frame
         void FixedUpdate()
+        {
+            Move();
+#if UNITY_EDITOR
+            if (Input.GetKeyDown(KeyCode.Space))
+                Jump();
+#endif
+            if (direction.x > 0)
+            {
+                //playerRender.flipX = false;
+                arrowSpawnPoint.transform.localPosition = new Vector3(0.341f, 0.185f, 0);
+            }
+            if (direction.x < 0)
+            {
+                //playerRender.flipX = true;
+                arrowSpawnPoint.transform.localPosition = new Vector3(-0.341f, 0.185f, 0);
+            }
+            //anima.SetFloat("Speed", Mathf.Abs(direction.x));
+            CheckFall();
+
+            /*if (shoot == true)
+                timeBeforeShoot += Time.deltaTime;
+            else
+                timeBeforeShoot = 0;*/
+            //Debug.Log(timeBeforeShoot);
+
+        }
+
+        private void Update()
+        {
+            //CheckShoot();
+
+            healthText.text = "" + health.health;
+        }
+
+        private void Move()
         {
             anima.SetBool("isGrounded", groundDetection.isGrounded);
             isJumping = isJumping && !groundDetection.isGrounded;
             direction = Vector3.zero;
             if (!isJumping && !groundDetection.isGrounded)
                 anima.SetTrigger("StartFall");
+#if UNITY_EDITOR
             if (Input.GetKey(KeyCode.A))
                 //transform.Translate(Vector2.left*Time.deltaTime*speed);
                 direction = Vector3.left;
-            if (Input.GetKeyDown(KeyCode.Space) && groundDetection.isGrounded)
-            {
-                playerbody.AddForce(Vector2.up * (jumpforce + bonusForce), ForceMode2D.Impulse);
-                anima.SetTrigger("StartJump");
-                isJumping = true;
-            }
             if (Input.GetKey(KeyCode.D))
+                direction = Vector3.right;
+#endif
+            if (controller.Left.IsPressed)
+                //transform.Translate(Vector2.left*Time.deltaTime*speed);
+                direction = Vector3.left;
+            if (controller.Right.IsPressed)
                 direction = Vector3.right;
             if (Input.GetKey(KeyCode.W))
                 transform.Translate(Vector2.up * Time.deltaTime * speed);
@@ -130,29 +181,27 @@ namespace PlayerTools
             direction.y = playerbody.velocity.y;
             playerbody.velocity = direction;
             if (direction.x > 0)
-            {
                 playerRender.flipX = false;
-                arrowSpawnPoint.transform.localPosition = new Vector3(0.341f, 0.185f, 0);
-            }
             if (direction.x < 0)
-            {
                 playerRender.flipX = true;
-                arrowSpawnPoint.transform.localPosition = new Vector3(-0.341f, 0.185f, 0);
-            }
+
             anima.SetFloat("Speed", Mathf.Abs(direction.x));
-            CheckFall();
         }
 
-        private void Update()
+        private void Jump()
         {
-            CheckShoot();
-
-            healthText.text = "" + health.health;
+            if (groundDetection.isGrounded)
+            {
+                playerbody.AddForce(Vector2.up * (jumpforce + bonusForce), ForceMode2D.Impulse);
+                anima.SetTrigger("StartJump");
+                isJumping = true;
+            }
         }
 
         void CheckShoot()
         {
-            if (Input.GetMouseButtonDown(0) && shoot == false && groundDetection.isGrounded)
+            //if (Input.GetMouseButtonDown(0) && shoot == false && groundDetection.isGrounded)
+            if (shoot == false && groundDetection.isGrounded)
             {
                 anima.SetBool("Shoot", true);
                 shoot = true;
